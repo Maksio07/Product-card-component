@@ -9,12 +9,15 @@ html{
 }
 
 body{
+    background-color: rgb(240, 236, 236);
+}
+
+.wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgb(240, 236, 236);
+    font-family: 'Montserrat', sans-serif; 
 }
 
 .card-box{
@@ -24,10 +27,12 @@ body{
     height: 40rem;
     background-color: #fff;
     border-radius: 1rem;
-
+    
+   
     .card-img{
-        border-top-left-radius: 1rem;
-        border-bottom-left-radius: 1rem;
+       width: 50%;
+       height: 100%;
+       border-radius: 1rem 0 0 1rem; 
     }
 
     .text-box{
@@ -35,7 +40,9 @@ body{
         flex-direction: column;
         justify-content: space-around;
         margin-left: 2rem;
-
+        width: 50%;
+        height: 100%;
+        
         .text-box-preview{
             margin-top: 1rem;
             font-size: 1.2rem;
@@ -106,56 +113,39 @@ body{
 
 
 @media (max-width: 568px){
-    .card-box{
-        display: flex;
-        flex-direction: column;
-        height: 72rem;
-        width: 34rem;
-    }
+   .card-box{
+    flex-direction: column;
+    width: 34rem;
+    height: 72rem;
 
     .card-img{
         background-image: url('../img/image-product-mobile.jpg');
+        width: 100%;
+        height: 44%;
         object-fit: cover;
-        width: 34rem;
-        height: 32rem;
-        border-radius: 1rem;
+        border-radius: 1rem 1rem 0 0;
     }
 
     .text-box{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 40rem;
+        height: 56%;
+        width: 100%;
+
+        .text-box-description{
+            margin-right: 4rem;
+        }
     }
+
 
     .old-price{
         margin-right: 6.2rem;
     }
+   }
 }
-
 
 @media (max-width: 368px){
     .card-box{
-        display: flex;
-        flex-direction: column;
         height: 76rem;
         width: 22rem;
-    }
-
-    .card-img{
-        background-image: url('../img/image-product-mobile.jpg');
-        object-fit: cover;
-        width: 22rem;
-        height: 32rem;
-        border-top-right-radius: 1rem;
-        border-bottom-left-radius: 0px;
-    }
-
-    .text-box{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 44rem;
     }
 
     .old-price{
@@ -168,4 +158,9 @@ body{
     max-width: 54rem;
  }
 }
+
+
+
+
+
 
